@@ -101,3 +101,17 @@ table, th, td {
 .header {
   background-color: #bd5734;
   font-size: 8rem; }
+
+.html-radio-buttons {
+  margin: 5rem;
+  font-size: 2rem; }
+  .html-radio-buttons__title {
+    margin-top: 1rem;
+    margin-bottom: 1rem; }
+
+.react-radio-buttons {
+  margin: 5rem;
+  font-size: 2rem; }
+  .react-radio-buttons__title {
+    margin-top: 1rem;
+    margin-bottom: 1rem; }
