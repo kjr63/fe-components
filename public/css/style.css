@@ -129,3 +129,35 @@ table, th, td {
   .react-checkbox__title {
     margin-top: 1rem;
     margin-bottom: 1rem; }
+
+.html-menu {
+  margin: 5rem;
+  font-size: 2rem; }
+  .html-menu__title {
+    margin-top: 1rem;
+    margin-bottom: 1rem; }
+
+.react-menu {
+  margin: 5rem;
+  font-size: 2rem; }
+  .react-menu__title {
+    margin-top: 1rem;
+    margin-bottom: 1rem; }
+  .react-menu__option {
+    text-decoration: capitalize; }
+
+.html-range {
+  margin: 5rem;
+  font-size: 2rem; }
+  .html-range__title {
+    margin-top: 1rem;
+    margin-bottom: 1rem; }
+
+.react-range {
+  margin: 5rem;
+  font-size: 2rem; }
+  .react-range__title {
+    margin-top: 1rem;
+    margin-bottom: 1rem; }
+  .react-range__option {
+    text-decoration: capitalize; }

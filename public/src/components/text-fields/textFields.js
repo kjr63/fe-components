@@ -148,8 +148,8 @@ export default class TextFields extends React.Component {
     }  
     render () {
         return (
-            <div className="w3-padding-large">
-				<h2>Text fields</h2>
+            <div className="w3-container w3-padding-large">
+				<h3>React text fields</h3>
                 <OpenInput />
                 <AddressInput />
                 <Powered />

@@ -4,7 +4,7 @@ export default class ReactRadioButtons extends React.Component {
     constructor (props) {
         super(props);
         this.state = {
-			value: 'male',
+			value: {gender:'male'},
 			maleChecked: true,
 			femaleChecked: false,
 			otherChecked: false
@@ -19,13 +19,13 @@ export default class ReactRadioButtons extends React.Component {
     handleChange(event){
 		//event.persist();
 		switch (event.target.value) {
-			case 'male': this.setState({ value: 'male', maleChecked: true, femaleChecked: false, otherChecked: false}); break;
-			case 'female': this.setState({ value: 'female', maleChecked: false, femaleChecked: true, otherChecked: false}); break;
-			case 'other': this.setState({ value: 'other', maleChecked: false, femaleChecked: false, otherChecked: true}); break;
+			case 'male': this.setState({ value: {gender:'male'}, maleChecked: true, femaleChecked: false, otherChecked: false}); break;
+			case 'female': this.setState({ value: {gender:'female'}, maleChecked: false, femaleChecked: true, otherChecked: false}); break;
+			case 'other': this.setState({ value: {gender:'other'}, maleChecked: false, femaleChecked: false, otherChecked: true}); break;
 		}	
     }
 	handleSubmit() {
-		alert('Your favorite sex ' + this.state.value);
+		alert('Your favorite sex ' + this.state.value.gender);
 		event.preventDefault();
 	}
     render () {
@@ -36,34 +36,37 @@ export default class ReactRadioButtons extends React.Component {
 					<input
                         type = "radio"
 						id = "male"
-                        ref = {this.input}
+						name = "gender"
                         value = "male"
                         onChange = {this.handleChange}
 						checked = {this.state.maleChecked}
+                        size = "60"						
                         className = { "react-radio-buttons__field"}
-                        size = "60"
+                        ref = {this.input}						
                     />
 					<label htmlFor="male"> Male</label><br />
 					<input
                         type = "radio"
 						id = "female"
-                        ref = {this.input}
+						name = "gender"
                         value = "female"
                         onChange = {this.handleChange}
 						checked = {this.state.femaleChecked}
+                        size = "60"						
                         className = { "react-radio-buttons__field"}
-                        size = "60"
+                        ref = {this.input}						
                     />
 					<label htmlFor="female"> Female</label><br />
 					<input
                         type = "radio"
 						id = "other"
-                        ref = {this.input}
+						name = "gender"						
                         value = "other"
                         onChange = {this.handleChange}
 						checked= {this.state.otherChecked}
-                        className = { "react-radio-buttons__field"}
                         size = "60"
+                        className = { "react-radio-buttons__field"}						
+						ref = {this.input}
                     />
 					<label htmlFor="other"> Other</label>
 					<div><input type="submit" value="Submit" /></div>
