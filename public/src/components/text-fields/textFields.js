@@ -47,17 +47,16 @@ class OpenInput extends React.Component{
         return (
             <div>
                 <form autoComplete="false">
+					<label htmlFor="open">Opentext: </label>
                     <input
                         type = "text"
+						id = "open"
+						name = "open"
                         ref = {this.input}
                         value = {this.state.value}
                         onKeyDown = {this.handleKeyDown}
                         onChange = {this.handleChange}
                         onBlur = {this.handleBlur}
-                        className = {
-                            "w3-input w3-xlarge " +
-                            "w3-card-4 w3-border "
-                        }
                         size = "60"
                     />
                 </form>
@@ -66,7 +65,7 @@ class OpenInput extends React.Component{
     }
 }
 
-class AddressInput extends React.Component{
+class DateInput extends React.Component {
     constructor(props){
         super(props);
         this.state = {value: ''};
@@ -95,53 +94,41 @@ class AddressInput extends React.Component{
         }        
     }
     handleChange(event){
-        //this.setState({ value: event.target.value });
-        const cursor = event.target.selectionStart;
-        this.setState({ value: event.target.value }, () => {
-            if (this.input.current != null)
-                this.input.current.selectionEnd = cursor;
-        });        
-        //console.log("tekstin asetus");
+        this.setState({ value: event.target.value });       
+        console.log("date: "+event.target.value );
     }     
     handleBlur (e) {
         e.preventDefault();
         //Tallenna muutokset
         //fetch("AddrWrite?resaddr="+e.target.value);
-		alert ("text field updated "+e.target.value);
+		alert ("your favorite date "+e.target.value);
     }    
     render(){
         return (
             <div>
-                <form autoComplete="false">                
+                <form autoComplete="false">
+					<label htmlFor="date">Date: </label>				
                     <input
-                        type = "text"
+                        type = "date"
+						id = "date"
+						name = ""
                         ref = {this.input}
-                        value = {this.state.value}
-                        onKeyDown = {this.handleKeyDown}                        
+                        value = {this.state.value}                       
                         onChange = {this.handleChange}
                         onBlur = {this.handleBlur}
-                        className = {
-                            "w3-input w3-large " +
-                            "w3-card-4 w3-border "
-                        }
                         size = "60"
                     />
+				<div className="w3-tooltip" style={{display: 'inline-block'}}>
+					<pre> </pre>
+					<i className="fa fa-question-circle" style={{fontSize:'3rem', color:'red'}}></i>
+					<div className="w3-text w3-card w3-margin w3-padding">Hello world!</div>
+				</div>
                 </form>
             </div>            
         )
     }
 }
 
-class Powered extends React.Component {
-    constructor (props) {
-        super (props);
-    }
-    render () {
-        return (
-            <p className="w3-hide-small w3-hide-medium">powered by <a href="https://www.suomiverkko.online" target="_blank">S.On</a></p>
-        );
-    }
-}
 export default class TextFields extends React.Component {
     constructor (props) {
         super (props);
@@ -149,10 +136,9 @@ export default class TextFields extends React.Component {
     render () {
         return (
             <div className="w3-container w3-padding-large">
-				<h3>React text fields</h3>
+				<h4>React text fields</h4>
                 <OpenInput />
-                <AddressInput />
-                <Powered />
+                <DateInput />
             </div>
         );
     }

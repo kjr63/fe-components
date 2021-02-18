@@ -78,7 +78,8 @@ table, th, td {
   margin-left: -60px;
   opacity: 0;
   transition: opacity 0.3s;
-  font-weight: normal; }
+  font-weight: normal;
+  font-size: small; }
 
 .tooltip .tooltiptext::after {
   content: "";
@@ -161,3 +162,27 @@ table, th, td {
     margin-bottom: 1rem; }
   .react-range__option {
     text-decoration: capitalize; }
+
+.html-number-field {
+  margin: 5rem;
+  font-size: 2rem; }
+  .html-number-field__title {
+    margin-top: 1rem;
+    margin-bottom: 1rem; }
+
+.react-number-field {
+  margin: 5rem;
+  font-size: 2rem; }
+  .react-number-field__title {
+    margin-top: 1rem;
+    margin-bottom: 1rem; }
+
+.react-tooltip {
+  margin: 5rem;
+  font-size: 2rem;
+  width: 20%; }
+  .react-tooltip__title {
+    margin-top: 1rem;
+    margin-bottom: 1rem; }
+  .react-tooltip__text {
+    font-size: 1rem; }

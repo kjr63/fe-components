@@ -8,6 +8,10 @@ import ReactCheckbox from '../components/checkboxes/reactCheckbox.js';
 import HtmlMenu from '../components/menus/htmlMenu.js';
 import ReactMenu from '../components/menus/reactMenu.js';
 import HtmlRange from '../components/ranges/htmlRange.js';
+import ReactRange from '../components/ranges/reactRange.js';
+import HtmlNumberField from '../components/number-field/htmlNumberField.js';
+import ReactNumberField from '../components/number-field/reactNumberField.js';
+import Tooltip from '../components/tooltip/tooltip.js';
 
 export default class WpApp extends React.Component {
     constructor (props) {
@@ -28,6 +32,10 @@ export default class WpApp extends React.Component {
 				<HtmlMenu />
 				<ReactMenu />
 				<HtmlRange />
+				<ReactRange />
+				<HtmlNumberField />
+				<ReactNumberField />
+				<Tooltip />
             </div>
         );
     }

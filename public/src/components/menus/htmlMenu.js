@@ -31,7 +31,7 @@ export default class HtmlMenu extends React.Component {
 				</form>
 				<br />
 				<form>
-					<label for="cars">Choose a car: </label>
+					<label htmlFor="cars">Choose a car: </label>
 					<select name="cars" id="cars">
 						<optgroup label="Swedish Cars">
 							<option value="volvo">Volvo</option>
