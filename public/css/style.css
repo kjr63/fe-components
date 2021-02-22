@@ -186,3 +186,10 @@ table, th, td {
     margin-bottom: 1rem; }
   .react-tooltip__text {
     font-size: 1rem; }
+
+.delay-message {
+  margin: 5rem;
+  font-size: 2rem; }
+  .delay-message__title {
+    margin-top: 1rem;
+    margin-bottom: 1rem; }
