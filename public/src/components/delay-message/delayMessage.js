@@ -63,7 +63,7 @@ export default class DelayMessage extends React.Component {
     render () {
 		return (
 			<div className="delay-message">
-				<div className="delay-message__title">Delay message</div>
+				<div className="delay-message__title">React delay announcement</div>
 				<form autoComplete="false" onSubmit={this.handleSubmit}>
 					<div><input type="submit" value="Submit" /></div>
 				</form>					

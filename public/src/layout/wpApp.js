@@ -13,6 +13,7 @@ import HtmlNumberField from '../components/number-field/htmlNumberField.js';
 import ReactNumberField from '../components/number-field/reactNumberField.js';
 import Tooltip from '../components/tooltip/tooltip.js';
 import DelayMessage from '../components/delay-message/delayMessage.js';
+import ReactModal from '../components/modals/modal.js';
 
 export default class WpApp extends React.Component {
     constructor (props) {
@@ -38,6 +39,7 @@ export default class WpApp extends React.Component {
 				<ReactNumberField />
 				<Tooltip />
 				<DelayMessage />
+				<ReactModal />
             </div>
         );
     }

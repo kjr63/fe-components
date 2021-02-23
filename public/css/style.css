@@ -193,3 +193,26 @@ table, th, td {
   .delay-message__title {
     margin-top: 1rem;
     margin-bottom: 1rem; }
+
+.react-modal {
+  margin: 4rem;
+  font-size: 2rem;
+  height: 20vh;
+  width: 20%;
+  background-color: rgba(128, 128, 128, 0.8); }
+  .react-modal__title {
+    margin-top: 1rem;
+    margin-bottom: 1rem; }
+  .react-modal__body {
+    background-color: rgba(0, 128, 0, 0.8);
+    z-index: 9999;
+    opacity: 1;
+    visibility: visible;
+    transition: all .2s; }
+    .react-modal__body__btn-close {
+      font-size: 4rem;
+      background-color: lightGrey;
+      width: 20%;
+      cursor: pointer; }
+  .react-modal__btn-open {
+    margin: 1rem; }

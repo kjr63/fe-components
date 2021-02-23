@@ -1,0 +1,30 @@
+.react-modal {
+	margin: 4rem;
+	font-size: 2rem;
+	height: 20vh;
+	width: 20%;	
+	//position: fixed;
+	//top: 0;
+	//left: 0;
+	background-color: rgba(grey, .8);	
+	&__title {	
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+	}	
+	&__body {
+		background-color: rgba(green, .8);
+		z-index: 9999;
+		opacity: 1;
+		visibility: visible;
+		transition: all .2s;
+		&__btn-close {
+			font-size: 4rem;
+			background-color: lightGrey;
+			width: 20%;
+			cursor: pointer;
+		}
+	}
+	&__btn-open {
+		margin: 1rem;
+	}
+}
